@@ -9,7 +9,7 @@ function openPopup(project) {
     } else if (project === 'multibootusb') {
         popupText.innerHTML = "MultiBootUSB — универсальная флешка для устранения системных неполадок.";
     } else if (project === 'github') {
-        popupText.innerHTML = "Огромное количество других очень интересных наших проектов на Github: <a style='color: red' href='http://github.com/Annikit' target='_blank'>Посмотреть здесь</a>.";
+        popupText.innerHTML = "Огромное количество других очень интересных наших проектов на Github в разделе Repositories: <a style='color: red' href='http://github.com/Annikit' target='_blank'>Посмотреть здесь</a>.";
     }
 
     popup.style.display = 'flex';
