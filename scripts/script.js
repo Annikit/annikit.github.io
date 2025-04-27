@@ -14,7 +14,7 @@ function openPopup(project) {
         // Если пользователь с мобильного устройства, добавить кнопку
         if (isMobile()) {
             const mobileBtn = document.createElement('a');
-            mobileBtn.href = "#"; // <-- Сюда вставить реальную ссылку на приложение
+            mobileBtn.href = "Видеохостинг Анникит"; // <-- Сюда вставить реальную ссылку на приложение
             mobileBtn.className = "btn";
             mobileBtn.id = "mobile-open-app";
             mobileBtn.style.display = "inline-block";
