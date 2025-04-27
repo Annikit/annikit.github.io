@@ -9,16 +9,23 @@ function openPopup(project) {
     }
 
     if (project === 'videohosting') {
-        popupText.innerHTML = "Это очень простой и одновременно с этим гениальный проект от Анникит. На этом видеохостинге нет никакой рекламы и авторских прав. Видеохостинг может временно не работать и выдавать ошибку, это нормально.";
+        popupText.innerHTML = "Это очень простой и одновременно с этим гениальный проект от Анникит. На этом видеохостинге нет никакой рекламы и авторских прав.";
 
         // Если пользователь с мобильного устройства, добавить кнопку
         if (isMobile()) {
             const mobileBtn = document.createElement('a');
-            mobileBtn.href = "Видеохостинг Анникит"; // <-- Сюда вставить реальную ссылку на приложение
+            mobileBtn.href = "https://www.appcreator24.com/app3539764-54jv6s";
+            mobileBtn.target = "_blank"; // открыть в новой вкладке
             mobileBtn.className = "btn";
             mobileBtn.id = "mobile-open-app";
             mobileBtn.style.display = "inline-block";
             mobileBtn.style.marginTop = "20px";
+            mobileBtn.style.padding = "10px 20px";
+            mobileBtn.style.backgroundColor = "red";
+            mobileBtn.style.color = "white";
+            mobileBtn.style.borderRadius = "8px";
+            mobileBtn.style.textDecoration = "none";
+            mobileBtn.style.fontSize = "16px";
             mobileBtn.innerText = "Открыть приложение";
             popupText.appendChild(mobileBtn);
         }
