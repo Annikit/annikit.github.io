@@ -72,7 +72,7 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.2s ease-out;
 }
 
 .hero-content h1 {
