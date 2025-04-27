@@ -219,7 +219,7 @@ body {
     }
 
     .logo img {
-        max-height: 40px;
+        max-height: 20px;
     }
 
     .footer-container p,
@@ -248,6 +248,6 @@ body {
     }
 
     .header-container {
-        padding: 0px;
+        padding: 5px;
     }
 }
