@@ -187,7 +187,7 @@ body {
 
 @media (max-width: 540px) {
     .hero {
-        height: 70vh;
+        height: 40vh;
     }
 
     .hero-content h1 {
