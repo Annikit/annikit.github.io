@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты Анникит</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-container">
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="Логотип Анникит"></a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Главная</a>
+            <a style="color: red;" href="projects.html">Проекты</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+        <h1>Наши Проекты</h1>
+        <p>Все наши проекты описаны здесь</p>
+    </div>
+</section>
+
+<main>
+    <section class="section">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project" onclick="openPopup('videohosting')">
+                    <h3>Видеохостинг Анникит</h3>
+                </div>
+                <div class="project" onclick="openPopup('telekanal')">
+                    <h3>Телеканал</h3>
+                </div>
+                <div class="project" onclick="openPopup('multibootusb')">
+                    <h3>MultiBootUSB</h3>
+                </div>
+                <div class="project" onclick="openPopup('github')">
+                    <h3>Другие (Github)</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="popup" class="popup">
+    <div class="popup-content" id="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <div id="popup-text"></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container footer-container">
+        <p>© ЗАО «Анникит». 2025 г. Все права защищены.</p>
+        <p>© НКО «Анникит». 2025 г. Все права защищены.</p>
+        <a href="#">Политика конфиденциальности</a>
+    </div>
+</footer>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
