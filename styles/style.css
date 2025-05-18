@@ -258,3 +258,16 @@ body {
         padding: 5px;
     }
 }
+@media screen and (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    ul li {
+        font-size: 0.95rem;
+    }
+}
