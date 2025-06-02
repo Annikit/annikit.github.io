@@ -32,3 +32,17 @@ function closePopup() {
     const popup = document.getElementById('popup');
     popup.style.display = 'none';
 }
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Анникит",
+  "url": "https://annikit.github.io/",
+  "logo": "http://annikit.github.io/assets/logo.svg",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "off.annikit@gmail.com"
+  }
+}
+</script>
