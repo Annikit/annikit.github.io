@@ -12,6 +12,7 @@ body {
     padding-top: 55px;
 }
 
+/* HEADER */
 .header {
     background: #000000;
     padding: 5px;
@@ -48,13 +49,14 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav a:hover {
     color: red;
 }
 
+/* HERO */
 .hero {
     position: relative;
     height: 60vh;
@@ -91,6 +93,7 @@ body {
     margin-bottom: 20px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -100,14 +103,17 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    transition: background 0.3s;
-    margin-top: 30px
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
 }
 
 .btn:hover {
     background: darkred;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
 }
 
+/* SECTIONS */
 .section {
     padding: 60px 0;
 }
@@ -125,7 +131,7 @@ body {
     border-radius: 15px;
     text-align: center;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .project:hover {
@@ -133,6 +139,7 @@ body {
     transform: translateY(-5px);
 }
 
+/* POPUP */
 .popup {
     display: none;
     position: fixed;
@@ -160,14 +167,14 @@ body {
     font-size: 30px;
     cursor: pointer;
     color: white;
-    transition: 400ms;
+    transition: color 0.4s ease;
 }
 
 .close:hover {
-    color: rgb(255, 0, 0);
-    transition: 400ms;
+    color: red;
 }
 
+/* FOOTER */
 .footer {
     background: #000;
     padding: 30px 0;
@@ -187,91 +194,7 @@ body {
     color: red;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(-30px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 540px) {
-    .hero {
-        height: 40vh;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .header-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .logo img {
-        max-height: 20px;
-    }
-
-    .footer-container p,
-    .footer-container a {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-
-    .popup-content {
-        padding: 20px;
-        width: 90%;
-    }
-
-    .header-container {
-        padding: 5px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .hero-content h1 {
-        font-size: 1.8rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    ul li {
-        font-size: 0.95rem;
-    }
-}
-
+/* SOCIAL LINKS */
 .social-link {
     display: flex;
     align-items: center;
@@ -292,4 +215,64 @@ body {
 
 .social-link:hover svg {
     transform: scale(1.1);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .popup-content {
+        padding: 20px;
+        width: 90%;
+    }
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        max-height: 20px;
+    }
+
+    .footer-container p,
+    .footer-container a {
+        font-size: 0.8rem;
+    }
+
+    ul li {
+        font-size: 0.95rem;
+    }
 }
