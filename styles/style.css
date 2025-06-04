@@ -271,3 +271,25 @@ body {
         font-size: 0.95rem;
     }
 }
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.05);
+    color: #f61c0d;
+}
+
+.social-link svg {
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
