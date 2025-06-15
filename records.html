@@ -36,35 +36,35 @@
 <main>
     <section class="section">
         <div class="container">
-            <div style="text-align: center; margin-bottom: 30px;">
-    <input id="searchInput" type="text" placeholder="Поиск записей..." style="padding: 10px 20px; border-radius: 25px; border: none; width: 80%; max-width: 400px; font-size: 1rem;">
-</div>
+            
+            <!-- Поиск и сортировка -->
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;">
+                <input id="searchInput" type="text" placeholder="Поиск записей..." style="padding: 10px 20px; border-radius: 25px; border: none; width: 80%; max-width: 400px; font-size: 1rem;">
+                <button id="sortToggle" class="btn" style="margin: 0;">Сортировка: ↓</button>
+            </div>
 
-            <div class="projects-grid">
+            <div id="recordsContainer" class="projects-grid">
 
-                <!-- Запись 1 -->
-                <div class="project">
+                <!-- Пример записи -->
+                <div class="project" data-date="2025-06-15">
                     <h3>🚀 Новый проект запущен!</h3>
                     <p>Сегодня мы запустили наш новый медиапроект, который уже доступен для всех пользователей. Проверьте раздел «Проекты»!</p>
                     <small>15 июня 2025</small>
                 </div>
 
-                <!-- Запись 2 -->
-                <div class="project">
+                <div class="project" data-date="2025-06-12">
                     <h3>📡 Обновления на телеканале</h3>
                     <p>Мы добавили новые шоу и расширили расписание! Убедитесь, что вы не пропустили премьеры.</p>
                     <small>12 июня 2025</small>
                 </div>
 
-                <!-- Запись 3 -->
-                <div class="project">
+                <div class="project" data-date="2025-06-05">
                     <h3>🎉 Спасибо за 10,000 подписчиков!</h3>
                     <p>Мы достигли важной вехи — 10 тысяч участников сообщества! Спасибо, что вы с нами ❤️</p>
                     <small>5 июня 2025</small>
                 </div>
 
-                <!-- Запись 4 -->
-                <div class="project">
+                <div class="project" data-date="2025-05-28">
                     <h3>🛠️ Новый open-source инструмент</h3>
                     <p>Выкатили утилиту на GitHub для автоматизации работы с JSON API. Подходит разработчикам любого уровня.</p>
                     <small>28 мая 2025</small>
@@ -83,5 +83,6 @@
     </div>
 </footer>
 
+<script src="scripts/script.js"></script>
 </body>
 </html>
