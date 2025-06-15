@@ -32,3 +32,23 @@ function closePopup() {
     const popup = document.getElementById('popup');
     popup.style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.project');
+
+    if (input) {
+        input.addEventListener('input', () => {
+            const filter = input.value.toLowerCase();
+
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    }
+});
