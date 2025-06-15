@@ -33,22 +33,47 @@ function closePopup() {
     popup.style.display = 'none';
 }
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const input = document.getElementById('searchInput');
-    const cards = document.querySelectorAll('.project');
+    const sortBtn = document.getElementById('sortToggle');
+    const container = document.getElementById('recordsContainer');
 
-    if (input) {
-        input.addEventListener('input', () => {
-            const filter = input.value.toLowerCase();
+    if (!container) return;
 
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                if (text.includes(filter)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+    let ascending = false;
+
+    const getCards = () => Array.from(container.querySelectorAll('.project'));
+
+    function filterAndSort() {
+        const search = input.value.toLowerCase();
+
+        const sorted = getCards().sort((a, b) => {
+            const dateA = new Date(a.dataset.date);
+            const dateB = new Date(b.dataset.date);
+            return ascending ? dateA - dateB : dateB - dateA;
+        });
+
+        container.innerHTML = '';
+
+        sorted.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            card.style.display = text.includes(search) ? 'block' : 'none';
+            container.appendChild(card);
         });
     }
+
+    input?.addEventListener('input', filterAndSort);
+
+    sortBtn?.addEventListener('click', () => {
+        ascending = !ascending;
+        sortBtn.textContent = `Сортировка: ${ascending ? '↑' : '↓'}`;
+        filterAndSort();
+    });
+
+    // Первичная сортировка при загрузке
+    filterAndSort();
 });
