@@ -18,23 +18,23 @@ html, body {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
-  padding: 15px 40px;
-  background: rgba(0,0,0,0.3); /* прозрачная шапка */
+  padding: 10px 35px; /* меньше высота шапки */
+  background: rgba(0,0,0,0.2); /* прозрачность меньше */
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  transition: background 0.4s ease, padding 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s ease; /* плавная анимация */
 }
 
 .header.scrolled {
   background: rgba(0,0,0,0.95);
   box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-  padding: 12px 40px;
+  padding: 8px 35px;
 }
 
 .logo img {
-  height: 42px;
+  height: 38px; /* уменьшенный логотип */
   transition: transform 0.3s ease;
 }
 
@@ -44,7 +44,7 @@ html, body {
 
 .nav {
   display: flex;
-  gap: 28px;
+  gap: 25px;
 }
 
 .nav a {
@@ -275,7 +275,7 @@ html, body {
   .hero h1 {font-size: 2rem;}
   .hero p {font-size: 1rem;}
   .nav {flex-direction: column; gap: 18px; text-align: center;}
-  .header {padding: 12px 20px;}
+  .header {padding: 8px 20px;}
   .projects-grid {grid-template-columns: 1fr; gap: 25px;}
   .footer-container {text-align: center;}
 }
@@ -284,6 +284,5 @@ html, body {
   .hero h1 {font-size: 1.6rem;}
   .hero p {font-size: 0.95rem;}
   .btn {padding: 10px 20px; font-size: 0.85rem;}
-  .header {padding: 10px 15px;}
   .logo img {height: 36px;}
 }
