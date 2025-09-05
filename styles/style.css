@@ -16,10 +16,11 @@ html, body {
 /* HEADER */
 .header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 10px 35px; /* меньше высота шапки */
-  background: rgba(0,0,0,0.2); /* прозрачность меньше */
+  padding: 10px 30px; /* меньше высота */
+  background: rgba(0, 0, 0, 0.15); /* большая прозрачность */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,13 +29,13 @@ html, body {
 }
 
 .header.scrolled {
-  background: rgba(0,0,0,0.95);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-  padding: 8px 35px;
+  background: rgba(0, 0, 0, 0.95); /* фон при скролле */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  padding: 12px 30px; /* слегка увеличиваем при скролле */
 }
 
 .logo img {
-  height: 38px; /* уменьшенный логотип */
+  height: 38px; /* немного меньше */
   transition: transform 0.3s ease;
 }
 
@@ -44,7 +45,7 @@ html, body {
 
 .nav {
   display: flex;
-  gap: 25px;
+  gap: 22px;
 }
 
 .nav a {
@@ -152,7 +153,7 @@ html, body {
   background: #1a1a1a;
   border-radius: 15px;
   padding: 28px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform .3s ease, box-shadow .3s ease;
   cursor: pointer;
   border: 1px solid #222;
 }
@@ -201,7 +202,7 @@ html, body {
   font-size: 28px;
   cursor: pointer;
   color: #aaa;
-  transition: color 0.3s ease;
+  transition: color .3s ease;
 }
 
 .close:hover {
@@ -236,7 +237,7 @@ html, body {
   text-decoration: none;
   display: block;
   margin-bottom: 8px;
-  transition: color 0.3s ease;
+  transition: color .3s ease;
 }
 
 .footer a:hover {
@@ -250,7 +251,7 @@ html, body {
   gap: 10px;
   color: inherit;
   text-decoration: none;
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform .2s ease, color .2s ease;
 }
 
 .social-link:hover {
@@ -275,7 +276,7 @@ html, body {
   .hero h1 {font-size: 2rem;}
   .hero p {font-size: 1rem;}
   .nav {flex-direction: column; gap: 18px; text-align: center;}
-  .header {padding: 8px 20px;}
+  .header {padding: 8px 15px;}
   .projects-grid {grid-template-columns: 1fr; gap: 25px;}
   .footer-container {text-align: center;}
 }
@@ -284,5 +285,5 @@ html, body {
   .hero h1 {font-size: 1.6rem;}
   .hero p {font-size: 0.95rem;}
   .btn {padding: 10px 20px; font-size: 0.85rem;}
-  .logo img {height: 36px;}
+  .logo img {height: 34px;}
 }
